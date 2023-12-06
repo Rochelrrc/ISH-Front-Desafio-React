@@ -1,9 +1,49 @@
 import './styles.css'
 import { useState } from 'react';
-import Logo from '../logo'
+import Logo from '../logo';
+import CloseEyeIcon from '../../assets/Closed-eye.png'
+import OpenEyeIcon from '../../assets/Open-eye.png'
+import AtentionIcon from '../../assets/AtentionIcon.png';
+import CloseIcon from '../../assets/CloseIcon.png';
 
 export default function Login() {
     const [isChecked, setIsChecked] = useState(false);
+    const [showPass, setShowPass] = useState(false);
+
+    const [form, setForm] = useState({ email: '', password: '' });
+
+    const [errorEmail, setErrorEmail] = useState('');
+    const [errorPass, setErrorPass] = useState('');
+    const [errorSubmit, setErrorSubmit] = useState('');
+
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        setErrorEmail('');
+        setErrorPass('');
+        setErrorSubmit('');
+
+        const validateEmail = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)$/;
+
+        if (!validateEmail.test(form.email)) {
+            setErrorEmail('Enter a valid email.');
+            return
+        }
+
+
+
+        if (form.password.length < 6) {
+            setErrorPass('Enter a valid password.');
+            return
+        }
+
+        setErrorSubmit('Login or password is invalid!')
+    }
+
+    const handleChangeForm = (e) => {
+        const value = e.target.value;
+        setForm({ ...form, [e.target.name]: value })
+    }
 
 
     return (
@@ -19,15 +59,26 @@ export default function Login() {
                             <p>to the Harpia SIEM!</p>
                         </div>
 
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className='input-form'>
                                 <label for="email">Email *</label>
-                                <input type="email" name="email" id="email" placeholder="Enter your email" />
+                                <input onChange={(e) => handleChangeForm(e)} value={form.email} type="email" name="email" id="email" placeholder="Enter your email" />
+                                {errorEmail && <span className='errorMessage'>{errorEmail}</span>}
                             </div>
 
-                            <div className='input-form'>
+                            <div className='input-form input-password'>
                                 <label for="password">Password *</label>
-                                <input type="password" name="password" id="password" placeholder="Enter your password" />
+                                <input type={!showPass ? 'password' : 'text'} onChange={(e) => handleChangeForm(e)} value={form.password} name="password" id="password" placeholder="Enter your password" />
+                                <img className='eye' src={!showPass ? CloseEyeIcon : OpenEyeIcon} alt='icone de exibir senha' onClick={() => setShowPass(!showPass)} />
+                                {errorPass && <span className='errorMessage'>{errorPass}</span>}
+
+                                {errorSubmit &&
+
+                                    <div className='popupError'>
+                                        <img className='atentionIcon' src={AtentionIcon} alt='atention icon' />
+                                        <span>{errorSubmit}</span>
+                                        <img className='closeIcon' src={CloseIcon} alt='close icon' onClick={() => setErrorSubmit('')} />
+                                    </div>}
                             </div>
 
                             <div className='bottom-form'>
@@ -41,7 +92,7 @@ export default function Login() {
                                 <a href="#!">  Forgot my password </a>
                             </div>
 
-                            <button className='btn-sing' type="button">Sing in</button>
+                            <button className='btn-sing'>Sing in</button>
 
                         </form>
 
