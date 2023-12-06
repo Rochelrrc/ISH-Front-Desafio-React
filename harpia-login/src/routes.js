@@ -1,7 +1,7 @@
-import './App.css';
+
 import { Routes, Route } from 'react-router-dom';
-import Login from './components/login'
-import ForgotPass from './components/forgotPass';
+import Login from './pages/login'
+import ForgotPass from './pages/forgotPass';
 
 function MainRoutes() {
   return (

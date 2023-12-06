@@ -1,5 +1,5 @@
 import './styles.css';
-import Logo from '../logo';
+import Logo from '../../components/logo';
 import { useState, useEffect } from 'react';
 import SuccessIcon from '../../assets/SuccessIcon.png';
 import CloseIcon from '../../assets/CloseIcon.png'

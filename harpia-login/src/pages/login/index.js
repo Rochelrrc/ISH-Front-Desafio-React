@@ -1,7 +1,7 @@
 import './styles.css'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../logo';
+import Logo from '../../components/logo';
 import CloseEyeIcon from '../../assets/Closed-eye.png'
 import OpenEyeIcon from '../../assets/Open-eye.png'
 import AtentionIcon from '../../assets/AtentionIcon.png';
