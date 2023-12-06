@@ -24,11 +24,11 @@ export default function Login() {
         setErrorPass('');
         setErrorSubmit('');
 
-        const validateEmail = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)$/;
+        const validateEmail = /^[^\s@]+@[a-zA-Z]+\.[^\s@]+$/;
 
         if (!validateEmail.test(form.email)) {
             setErrorEmail('Enter a valid email.');
-            return
+
         }
 
 
@@ -63,13 +63,13 @@ export default function Login() {
                         <form onSubmit={handleSubmit}>
                             <div className='input-form'>
                                 <label for="email">Email *</label>
-                                <input onChange={(e) => handleChangeForm(e)} value={form.email} type="email" name="email" id="email" placeholder="Enter your email" />
+                                <input className={!errorEmail ? 'input-ok' : 'input-error'} onChange={(e) => handleChangeForm(e)} value={form.email} type="email" name="email" id="email" placeholder="Enter your email" />
                                 {errorEmail && <span className='errorMessage'>{errorEmail}</span>}
                             </div>
 
                             <div className='input-form input-password'>
                                 <label for="password">Password *</label>
-                                <input type={!showPass ? 'password' : 'text'} onChange={(e) => handleChangeForm(e)} value={form.password} name="password" id="password" placeholder="Enter your password" />
+                                <input className={!errorPass ? 'input-ok' : 'input-error'} type={!showPass ? 'password' : 'text'} onChange={(e) => handleChangeForm(e)} value={form.password} name="password" id="password" placeholder="Enter your password" />
                                 <img className='eye' src={!showPass ? CloseEyeIcon : OpenEyeIcon} alt='icone de exibir senha' onClick={() => setShowPass(!showPass)} />
                                 {errorPass && <span className='errorMessage'>{errorPass}</span>}
 
