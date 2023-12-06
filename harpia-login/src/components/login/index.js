@@ -1,5 +1,6 @@
 import './styles.css'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../logo';
 import CloseEyeIcon from '../../assets/Closed-eye.png'
 import OpenEyeIcon from '../../assets/Open-eye.png'
@@ -89,7 +90,7 @@ export default function Login() {
                                     <label for="exampleCheck2"> Remember me </label>
                                 </div>
 
-                                <a href="#!">  Forgot my password </a>
+                                <Link to="/forgot_password">  Forgot my password </Link>
                             </div>
 
                             <button className='btn-sing'>Sing in</button>

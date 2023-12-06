@@ -1,10 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
 :root {
     --bgPrimaryColor: #181818;
     --bgSecundaryColor: #202020;
@@ -17,25 +10,24 @@
     --errorColor: #F87171;
 }
 
-.container-geral {
-
+.container-geral-forgot {
     display: flex;
     justify-content: space-between;
 
     max-width: 100vw;
 }
 
-.box-login {
-
+.box-forgot {
     width: 50vw;
     height: 100vh;
 
     display: flex;
     justify-content: center;
 
+
 }
 
-.border {
+.border-forgot {
     width: 50%;
     height: 100vh;
 
@@ -44,12 +36,9 @@
     align-items: center;
     justify-content: center;
 
-
 }
 
-.login-container {
-
-
+.forgot-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +46,20 @@
     gap: 5.5rem;
 }
 
-.copyright {
+.sup-email {
+    display: flex;
+    justify-items: center;
+
+    color: var(--fontSecundaryColor, #BCBCBC);
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.copyright-forgot {
     color: var(--fontTertiaryColor);
     text-align: center;
     font-family: "Inter";
@@ -67,12 +69,12 @@
     line-height: normal;
 }
 
-.text-box {
+.text-box-forgot {
     width: 100%;
     height: 3.5rem;
 }
 
-.text-box h1 {
+.text-box-forgot h1 {
     color: var(--fontPrimaryColor);
 
 
@@ -83,7 +85,7 @@
     line-height: 2.25rem;
 }
 
-.text-box p {
+.text-box-forgot p {
     color: var(--fontPrimaryColor);
 
     font-family: "Inter";
@@ -93,7 +95,8 @@
     line-height: 1.25rem;
 }
 
-form {
+.form-forgot {
+
     display: flex;
     width: 24rem;
     flex-direction: column;
@@ -101,7 +104,7 @@ form {
     gap: 1.5rem;
 }
 
-.input-form {
+.input-form-forgot {
     display: flex;
     flex-direction: column;
 
@@ -109,13 +112,13 @@ form {
     gap: 0.38rem
 }
 
-.input-form label {
+.input-form-forgot label {
     color: var(--fontPrimaryColor);
     font-family: "Inter";
 
 }
 
-.input-form input {
+.input-form-forgot input {
     display: flex;
     height: 2.625rem;
     padding: 0.5625rem 0.6875rem;
@@ -132,122 +135,12 @@ form {
     background: var(--bgSecundaryColor);
 }
 
-.input-form input:focus {
+.input-form-forgot input:focus {
     outline: none;
     border: 0.1rem solid var(--activedMainColor);
 }
 
-.input-password {
-    position: relative;
-}
-
-.eye {
-    width: 1.25rem;
-    height: 1.25rem;
-
-    position: absolute;
-    right: 1rem;
-    top: 2.4rem;
-
-    cursor: pointer;
-}
-
-.errorMessage {
-    color: var(--errorColor);
-
-    font-family: 'Inter';
-    font-size: 0.75rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.popupError {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    display: flex;
-    width: 24rem;
-    padding: 1rem;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-top: 1rem;
-    border-radius: 0.5rem;
-    background: var(--dark-mode-auxiliary-colors-bg-red-color, #2E2121);
-}
-
-.popupError span {
-    color: var(--fontPrimaryColor)
-}
-
-.closeIcon {
-    cursor: pointer;
-}
-
-.bottom-form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-}
-
-.bottom-form link:hover {
-    transform: scale(1.05);
-}
-
-.bottom-form link:visited {
-    color: #07A5C4;
-}
-
-.container-check input {
-    width: 1rem;
-    height: 1rem;
-
-
-
-    border-radius: 0.25rem;
-    border: 1px solid var(--bgTertiaryColor);
-    background: var(--bgPrimaryColor);
-}
-
-.container-check label {
-    color: var(--fontPrimaryColor);
-    font-family: "Inter";
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.25rem;
-
-}
-
-.checkbox {
-    appearance: none;
-    background-color: var(--bgPrimaryColor);
-}
-
-.checkbox:checked {
-
-    background-color: var(--activedMainColor);
-}
-
-.checkMark::before {
-    content: '\2713';
-    font-size: 14px;
-    color: var(--bgSecundaryColor);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    display: none;
-}
-
-.checkbox:checked+.checkMark::before {
-    display: block;
-}
-
-
-.btn-sing {
+.btn-request {
     width: 100%;
     height: 2.5rem;
 
