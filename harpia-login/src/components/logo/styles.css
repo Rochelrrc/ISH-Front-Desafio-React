@@ -1,0 +1,28 @@
+:root {
+    --bgPrimaryColor: #181818;
+    --bgSecundaryColor: #202020;
+    --bgTertiaryColor: #484848;
+    --fontPrimaryColor: #E3E2E2;
+    --fontSecundaryColor: #BCBCBC;
+    --fontTertiaryColor: #989898;
+    --btnColor: #0891B2;
+    --activedMainColor: #07A5C4;
+}
+
+.container-logo {
+    background-color: var(--bgSecundaryColor);
+
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0rem 0rem 0rem 9.375rem;
+
+
+}
+
+.container-logo img {
+    width: 25.18rem;
+    height: 22.66369rem;
+}

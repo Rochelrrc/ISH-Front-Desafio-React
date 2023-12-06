@@ -16,10 +16,21 @@
     --activedMainColor: #07A5C4;
 }
 
+.container-geral {
+
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 100vw;
+}
+
 .box-login {
 
-    width: 100vw;
+    width: 50vw;
     height: 100vh;
+
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -153,6 +164,31 @@ form {
     line-height: 1.25rem;
 
 }
+
+.checkbox {
+    appearance: none;
+    background-color: var(--bgPrimaryColor);
+}
+
+.checkbox:checked {
+
+    background-color: var(--activedMainColor);
+}
+
+.checkMark::before {
+    content: '\2713';
+    font-size: 14px;
+    color: var(--bgSecundaryColor);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+}
+
+.checkbox:checked+.checkMark::before {
+    display: block;
+}
+
 
 .btn-sing {
     width: 100%;

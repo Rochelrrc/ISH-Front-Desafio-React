@@ -15,7 +15,3 @@
   --btnColor: #0891B2;
   --activedMainColor: #07A5C4;
 }
-
-.container-geral {
-  background-color: var(--bgPrimaryColor);
-}
