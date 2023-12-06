@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Login from '../../pages/login';
 import ForgotPass from "../../pages/forgotPass";
+import Logo from '../logo'
 import { BrowserRouter } from "react-router-dom";
 import '@testing-library/jest-dom';
 
@@ -31,5 +32,19 @@ describe("Forgot Pass", () => {
 
         expect(screen.getByText("Email *")).toBeInTheDocument();
         expect(screen.getByText("Request")).toBeInTheDocument();
+    })
+})
+
+describe("Logotipo Harpia", () => {
+    it("Should render correctly", () => {
+
+        render(
+            <BrowserRouter>
+                <Logo />
+            </BrowserRouter>
+        )
+
+        expect(screen.getByText("Harpia")).toBeInTheDocument();
+
     })
 })
