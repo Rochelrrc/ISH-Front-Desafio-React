@@ -1,5 +1,5 @@
 import './styles.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../components/logo';
 import CloseEyeIcon from '../../assets/Closed-eye.png'
@@ -17,6 +17,8 @@ export default function Login() {
     const [errorPass, setErrorPass] = useState('');
     const [errorSubmit, setErrorSubmit] = useState('');
 
+
+
     function handleSubmit(e) {
         e.preventDefault();
 
@@ -28,9 +30,8 @@ export default function Login() {
 
         if (!validateEmail.test(form.email)) {
             setErrorEmail('Enter a valid email.');
-
+            return
         }
-
 
 
         if (form.password.length < 6) {
@@ -38,7 +39,13 @@ export default function Login() {
             return
         }
 
-        setErrorSubmit('Login or password is invalid!')
+        if (!errorEmail && !errorPass) {
+
+            return setErrorSubmit('Login or password is invalid!')
+
+        }
+
+
     }
 
     const handleChangeForm = (e) => {

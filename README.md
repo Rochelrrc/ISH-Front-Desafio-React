@@ -11,7 +11,7 @@
 
 ### Como acessar o link para teste?
 
-- Teste: `git clone https://github.com/alura/techguide.git`
+- Teste: `https://6571d0af7a543413d9f40bf8--stunning-hotteok-c759ff.netlify.app`
 
 ## Desafio Harpia-ISH Site:
 
