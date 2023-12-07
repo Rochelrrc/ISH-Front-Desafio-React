@@ -1,5 +1,5 @@
 import './styles.css'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../components/logo';
 import CloseEyeIcon from '../../assets/Closed-eye.png'
