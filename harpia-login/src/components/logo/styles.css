@@ -26,3 +26,13 @@
     width: 25.18rem;
     height: 22.66369rem;
 }
+
+
+@media screen and (min-width: 1920px) {
+
+    .container-logo img {
+
+        width: 37.77006rem;
+        height: 33.9955rem;
+    }
+}
