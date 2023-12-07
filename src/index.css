@@ -15,6 +15,17 @@ code {
     monospace;
 }
 
+:root {
+  --bgPrimaryColor: #181818;
+  --bgSecundaryColor: #202020;
+  --bgTertiaryColor: #484848;
+  --fontPrimaryColor: #E3E2E2;
+  --fontSecundaryColor: #BCBCBC;
+  --fontTertiaryColor: #989898;
+  --btnColor: #0891B2;
+  --activedMainColor: #07A5C4;
+  --errorColor: #F87171;
+}
 
 @media screen and (max-width: 1280px) {
   body {
@@ -24,7 +35,7 @@ code {
 
   .container-geral {
     overflow-x: auto;
-    min-width: 1280px;
+    width: 1280px;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);

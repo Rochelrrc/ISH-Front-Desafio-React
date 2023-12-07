@@ -56,16 +56,16 @@ export default function Login() {
 
     return (
 
-        <div className='container-geral'>
+        <main className='container-geral'>
             <div className='box-login'>
 
                 <div className="border">
-                    <div className='login-container'>
+                    <section className='login-container'>
 
-                        <div className='text-box'>
+                        <section className='text-box'>
                             <h1>Welcome back</h1>
                             <p>to the Harpia SIEM!</p>
-                        </div>
+                        </section>
 
                         <form onSubmit={handleSubmit}>
                             <div className='input-form'>
@@ -89,7 +89,7 @@ export default function Login() {
                                     </div>}
                             </div>
 
-                            <div className='bottom-form'>
+                            <section className='bottom-form'>
 
                                 <div className='container-check'>
                                     <input className="checkbox" checked={isChecked} onChange={() => setIsChecked(!isChecked)} type="checkbox" value="" id="exampleCheck2" />
@@ -98,7 +98,7 @@ export default function Login() {
                                 </div>
 
                                 <Link to="/forgot_password">  Forgot my password </Link>
-                            </div>
+                            </section>
 
                             <button className='btn-sing'>Sing in</button>
 
@@ -106,7 +106,7 @@ export default function Login() {
 
                         <p className="copyright">© 2022 SafeLabs. All rights reserved. v2.0.0</p>
 
-                    </div>
+                    </section>
 
                 </div>
 
@@ -115,7 +115,7 @@ export default function Login() {
 
             <Logo />
 
-        </div>
+        </main>
 
     )
 }

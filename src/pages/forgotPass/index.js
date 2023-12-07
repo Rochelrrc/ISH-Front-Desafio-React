@@ -36,16 +36,16 @@ export default function ForgotPass() {
     }, [success]);
 
     return (
-        <div className="container-geral-forgot">
+        <main className="container-geral-forgot">
 
             <div className='box-forgot'>
                 <div className="border-forgot">
-                    <div className="forgot-container">
+                    <section className="forgot-container">
 
-                        <div className="text-box-forgot">
+                        <section className="text-box-forgot">
                             <h1>Forgot password</h1>
                             <p>Enter your email to receive the password reset link</p>
-                        </div>
+                        </section>
 
                         <form className='form-forgot' onSubmit={handleSubmit}>
                             <div className='input-form-forgot'>
@@ -63,13 +63,14 @@ export default function ForgotPass() {
 
                         <p className="copyright-forgot">© 2023 SafeLabs. All rights reserved. v2.49.57</p>
 
-                    </div>
+                    </section>
 
                 </div>
 
             </div>
 
-            {success &&
+            {
+                success &&
                 <div className='success-container'>
                     <img src={SuccessIcon} alt='success icon' />
 
@@ -80,9 +81,10 @@ export default function ForgotPass() {
 
                     <img className='close-icon' src={CloseIcon} alt='close icon' />
 
-                </div>}
+                </div>
+            }
 
             <Logo />
-        </div>
+        </main >
     )
 }
