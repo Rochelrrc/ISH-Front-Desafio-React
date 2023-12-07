@@ -11,7 +11,7 @@
 
 ### Como acessar o link para teste?
 
-- Teste: `https://6571d0af7a543413d9f40bf8--stunning-hotteok-c759ff.netlify.app`
+- Teste: `https://ish-harpia-desafio.netlify.app`
 
 ## Desafio Harpia-ISH Site:
 
